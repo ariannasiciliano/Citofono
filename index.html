@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8">
+	<title>Il citofono</title>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
+<style type="text/css">
+
+/* BODY */
+			body{
+			padding: 0px;
+			margin: 0px;
+			font-family: 'Montserrat', sans-serif;
+			background-color: white;
+			}
+
+/* BARRA NAVIGAZIONE */
+		
+			.main-nav .logo{
+				margin-top: 12px;
+				margin-bottom: 12px;
+				font-size: 30px;
+				margin-left: 40px;
+				color: black;
+			}
+
+
+			.back{
+				padding: 10px 30px;
+				/*border-radius: 20px;*/
+				border: none;
+				background-color: #D3D3D3;
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 20px;
+				text-decoration: none;
+				float: right;
+				cursor: pointer;
+				transition: 0.3s;
+				margin-top: -46px;
+				margin-right: 40px;
+				color: black;
+				}​​
+
+				.back:hover {​​
+				background-color: white;
+				color: black;
+				text-decoration: underline;
+				opacity: 100%;
+				transition: 0.3s;
+				}
+
+
+ /* HEADER */
+			.showcase{
+			max-width: 100%;
+			height: 400px;
+			background: url(img/provabn.jpg) no-repeat center center/cover;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
+			padding-bottom: 80px;
+			margin-bottom: 20px;
+			}
+
+/* GRIGLIA */
+			.griglia{
+				margin-top: 10px;
+				margin-right: 50px;
+				margin-left: 50px;
+
+				max-width: 1920px;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+				grid-column-gap: 2em;
+				grid-row-gap: 2em; 
+				margin-bottom: 3em;
+			}
+
+			.cella{
+			/*	outline: 1px red solid;*/
+				min-height: 10em;
+			}
+			.doppia{
+			/*	outline: 1px red solid;*/
+				grid-column: span 2;
+			}
+
+			.tripla{
+			/*	outline: 1px red solid;*/
+				grid-column: span 3;
+			}
+
+			.quadrupla{
+			/*	outline: 1px red solid;*/
+				grid-column: span 4;
+			}
+			.quintupla{
+			/*	outline: 1px red solid;*/
+				grid-column: span 5;
+			}
+
+/* GRIGLIA PICCOLA */
+			.grigliapic{
+				margin-top: 0px;
+				margin-right: 0px;
+				margin-left: 0px;
+				margin-bottom: 0px;
+				
+				
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-column-gap: 2em;
+				grid-row-gap: 2em; 
+			}
+
+			.cellapic{
+			/*	outline: 1px red solid;*/
+				min-height: 5em;
+
+			}
+
+
+
+/*TITOLI PARAGRAFI*/
+			h3{
+				margin-left: 50px;}
+
+/*SOTTO TITOLI PARAGRAFI*/
+			h4{
+				color: black;
+				font-size: 16px;
+				margin-top: -22px; 
+				margin-left: 50px;
+			}
+
+/*DIDASCALIE*/
+			figcaption{
+				font-size: 10px;
+				color: grey;
+				margin-top: 10px;
+			}
+
+/* SEZIONE FINALE */
+
+			.contenitorefinale{
+				background-color: #D3D3D3;
+				/*padding-left: 50px;*/
+				padding-top: 10px;
+				padding-bottom: 10px;
+				font-weight: 300;
+			}
+
+/* IMMAGINI RESPONSIVE */
+			.responsive {
+				width: 100%;
+				height: auto;
+				height: auto;
+				max-width: 400px;
+				
+			}
+
+/* VIDEO RESPONSIVE */
+			.responsivevideo {
+				width: 100%;
+				max-width: 800px;
+				height: auto;
+			}
+
+/* IMMAGINI RESPONSIVE SCHEMA */
+			.responsive2 {
+				width: 100%;
+				max-width: 600px;
+				height: auto;
+			}
+
+
+/* LINEA CHE SEPARA SEZIONI */
+			.line {
+				border: 1,5px solid #D3D3D3;	
+				position: relative;
+        		max-width: 1500px;
+        		margin-left: 50px;
+        		margin-right: 50px;
+
+			}
+
+
+/* BOX VIDEO */
+			#boxvideo {
+				background-color: #D3D3D3;
+				padding-top: 5px;
+				padding-bottom: 5px;
+
+			}
+
+
+/* TESTO FINALE */
+			.textfinale {
+				font-size: 10px;
+				margin-left: 50px;
+
+			}
+
+			.atlantesx{
+				margin-left: 50px;
+			}
+
+			.atlantedx{
+				float:right; 
+				margin-right: 50px; 
+				margin-top: -72px;
+			}
+
+		
+ 
+ /*CAMBIAMENTI PER GRIGLIA*/
+
+			@media (max-width: 800px){
+			.griglia{
+				
+				max-width: initial;
+				display: block;
+				
+			}
+			.cella{
+				margin-bottom: 2em;
+			}
+			.doppia{
+				margin-bottom: 2em;
+			}
+			.tripla{
+				margin-bottom: 2em;
+			}
+			.quadrupla{
+				margin-bottom: 2em;
+			}
+			.quintupla{
+				
+			} 
+
+
+ /*CAMBIAMENTI PER ATLANTE*/
+
+			@media (max-width: 660px){
+
+			.atlantedx{ 
+				float:left;
+				margin-left: 50px;
+				margin-top: 5px;	
+			}
+
+			.contenitorefinale{
+				background-color: #D3D3D3;
+				padding-top: 10px;
+				padding-bottom: 80px;
+				
+			}
+
+			}
+
+
+
+</style>
+
+</head>
+<body>
+
+<!-- Nav -->
+		<nav class="main-nav">
+
+			<div class="logo" >
+				<span style="font-size: 25px;font-weight: 300;">IL CITOFONO</span>
+			</div>
+				 <button type="button" class="back">INDICE</button> 			
+		</nav>
+
+
+
+<!-- Header -->
+	<header class="showcase"></header>
+
+
+<!-- Sezione 1 -->
+<section>
+	<h3 style="font-size: 25px; font-weight: 300;" class="name"> L'orecchio magico </h3>
+	<h4 class="subtitle" style="font-weight: 300;"> Il citofono di Casa Sola Busca del 1930 </h4>
+
+	<div class="griglia">
+
+		<div class="tripla">
+			<p style="font-weight: 300; margin-top: 0px">
+				Il grande orecchio di via Serbelloni, alto 70 centimetri, è stato pensato proprio come un <strong>impianto di comunicazione wireless ante litteram </strong>per collegare l’interno dell’edificio con l’esterno ed è il frutto dell’idea avveniristica dell’epoca. 
+				<br>
+				Oggi è diventato una piccola <strong>fonte di mistero</strong>: si racconta che chiunque si avvicini e gli sussurri un desiderio, un giorno lo vedrà realizzato. 
+				Anche l’edificio è un’opera d’arte a cielo aperto. 
+				
+				È stato costruito nelle seconda metà degli anni Venti, dall’artista mantovano, milanese d’adozione, <strong>Aldo Andreani </strong>(1887-1971). Fu lui a volere un citofono «sotto mentite spoglie» dal grande valore estetico che, oltre ad avere uno scopo pratico, avesse anche un senso allusivo: 
+				«Ascoltare la città». </p>
+		</div>
+		<div class="cella">
+			<img class="responsive" src="img/orecchia/mod/modok/1.jpg">
+			<figcaption><em>1930, Adolfo Wildt, L'orecchio di Milano</em></figcaption>
+		</div>
+		<div class="cella">
+			<img class="responsive" src="img/orecchia/mod/modok/2.jpg">
+			<figcaption><em>1925, Aldo Andreani, Casa Sola Busca</em></figcaption>
+		</div>
+	</div>
+
+</section>
+
+<!-- Sezione 2 -->
+<section id="boxvideo">
+	<h3 style="font-size: 25px; font-weight: 300;" class="name"> Il campanello di Passalacqua</h3>
+	<h4 class="subtitle" style="font-weight: 300;"> 2002, "Nati stanchi" di Dominick Tambasco</h4>
+
+	<div class="griglia">
+
+		<div class="doppia">
+			<p style="font-weight: 300; margin-top: 0px">
+					"Nati stanchi" è il primo lungometraggio della coppia comica Ficarra e Picone.
+					<br>
+					<br>
+					Nel breve video sono presenti diversi sketch divertenti in cui i due protagonisti si divertono a fare scherzi citofonici</p>
+		</div>
+		<div class="tripla">
+			<video class="responsivevideo" width="430" height="auto" src="img/videook.MP4" controls >video</video>
+		</div>
+	</div>
+
+</section>
+
+<!-- Sezione 3 -->
+<section>
+
+	<h3 style="font-size: 25px; font-weight: 300;" class="name"> Le origini della scoperta</h3>
+	<h4 class="subtitle" style="font-weight: 300;"> La nascita e l'evoluzione del citofono </h4>
+
+	<div class="griglia">
+		<div class="tripla">
+			<p style="font-weight: 300; margin-top: 0px">
+					Da sempre, l’uomo ha tentato di proteggere la sua proprietà. Nel passato, la sicurezza all’ingresso di un edificio era garantita da una semplice serratura ed uno spioncino. Nel corso degli anni le esigenze degli utenti hanno continuato a crescere, cambiando in modo significativo la forma e la funzione dei dispositivi, che oggi chiamiamo citofoni.
+					<br>
+					I primi sistemi analogici offrivano agli utenti la possibilità di comunicazione vocale e di controllo della porta. Successivamente, l’aggiunta di una telecamera nel posto esterno ha consentito all’utente di parlare e di vedere il visitatore all’ingresso. Oggi il mercato richiede soluzioni che possano soddisfare le nuove esigenze di mobilità e sicurezza ed è proprio per questo che è in continuo sviluppo.
+					<br>
+					<br>
+					I primi citofoni, installati in alcuni palazzi signorili, alcuni ancora presenti, sono essenzialmente formati da condotti in pietra o metallo ricavati nelle pareti, in grado di trasportare il suono. In prossimità dell’ingresso era presente l’imboccatura del condotto (decorata in forma di orecchio nel caso della Casa Sola-Busca a Milano). <strong>(vedi fig. 2)</strong>
+					<br>
+					<br>
+					<strong>Leonardo da Vinci</strong> studiò, come documentato nel Codice Atlantico, un sistema citofonico da utilizzare nelle fortezze e nei punti di avvistamento per comunicare e molto probabilmente realizzò un prototipo funzionante.
+					<br>
+					<br>
+					L’origine e l’invenzione del citofono risale alla <strong>prima metà del 500</strong> quando Leonardo da Vinci, partendo dalla necessità di dover comunicare con le persone che si trovavano all’esterno delle mura cittadine, ebbe l’idea e la genialità di realizzare questo sistema di comunicazione sicuro che tutt’ora utilizziamo. 
+					Il progettato di Leonardo è disegnato nel<strong> Codice Atlantico</strong>, è un moderno sistema di comunicazione, perché non solo anticipa Meucci e Bell (gli inventori del telefono) ma persino il concetto di telematica. 
+					L’invenzione è stata ricostruita per la prima volta al mondo ed esposta il <strong>13 aprile</strong> al Museo Ideale di Leonardo a Vinci.
+					Il progetto di Leonardo da vinci è contenuto in un manoscritto conservato all’Istituto di Francia, a Parigi. 
+					<br>
+					<br>
+					Leonardo era così affascinato dalla comunicazione che nel Codice Atlantico, uno dei documenti più famosi conservato alla Biblioteca Ambrosiana di Milano, immagina la possibilità di un collegamento in rete tra popoli per colloquiare con un linguaggio universale. 
+					<br>
+					<br>
+					Dal quel giorno la tecnologia ha subito rapidi ed importanti sviluppi evolvendosi sempre più, questo per abbracciare qualsiasi esigenza potesse presentarsi e per semplificare sempre più le nostre vite.
+					<br>
+					<br>
+					Il primo vero e proprio citofono risale al 1916: è un citofono francese creato dall'azienda "LE PARISEN - UNIS FRANCE". <strong>(vedi fig. 1)</strong>
+					I citofoni inizialmente erano solo di colore nero. Il colore è stato introdotto dalla "MIGLIAVACCA & BISI" nel 1955. <strong>(vedi fig. 8)</strong>
+					<br>
+					<br>
+					<strong>Gregorio Zara</strong>, scienziato filippino, sviluppò il primo videotelefono o televisore a due vie brevettato nel <strong>1955 </strong>come "rete di separatori di segnali telefonici fotografici".
+					<br>
+					<br>
+					Grazie a questi strumenti possiamo risparmiare tantissimo tempo evitando di dover uscire di casa per parlare con l’ospite, aumentare quindi la nostra sicurezza personale e dai quali possiamo comandare a distanza una serie di funzioni molto utili.</p>
+		</div>
+
+		<div class="doppia">
+ 				 <div class="grigliapic">
+
+ 					<div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/2a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1916</strong>, <em>Citofono francese "LE PARISEN - UNIS FRANCE"</em></figcaption>
+ 				 </div>
+
+ 				 <div class="cellapicc">	
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/4a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;"> 1922</strong>, <em>citofono creato da Adolfo Wildt a Milano</em></figcaption>
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/5a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1925</strong>, <em>citofono in legno della "THOMSON HOUSTON U.S.A"</em></figcaption>	
+ 				 </div>
+
+ 				  <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/7a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1930</strong>, <em>citofono in metallo nero ad un tasto</em></figcaption>
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/8aok.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1930</strong>, <em>citofono creato dalla ditta "SAFNAT" di Milano</em></figcaption>	
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/9a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1940</strong>, <em>citofono creato dalla ditta "SAFNAT"</em></figcaption>
+ 				 </div>
+
+ 				 <div class="cellapicc">	
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/6a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1950</strong>, <em>citofono creato dalla ditta "SAFNAT" di Milano</em></figcaption>
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/11a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1955</strong>, <em>introduzione del colore grazie alla "MIGLIAVACCA & BISI"</em></figcaption>	
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/12a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1960</strong>, <em>citofono ad un tasto per chiamata creato da "SIEMENS AUSO"</em></figcaption>
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/13a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1960</strong>, <em>citofono con tasto di chiamata creato dalla "URMET"</em></figcaption>	
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/14a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">1990</strong>, <em>citofono a parete della "TERRANEO"</em></figcaption>
+ 				 </div>
+
+ 				 <div class="cellapicc">	
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/15a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">2000</strong>, <em>videocitofono creato dalla "TERRANEO"</em></figcaption>
+ 				 </div>
+
+ 				 <div class="cellapicc">
+ 				 	<img class="responsive" src="img/storia/mod/modok/ok/16a.jpg">
+					<figcaption><strong style="color:black; font-size: 12px;">OGGI</strong>, <em>videocitofono della "BTICINO"</em></figcaption>	
+ 				 </div>
+
+ 				 </div>
+ 			</div>
+		</div>
+
+		
+		
+	</div>
+
+</section>
+
+<hr class="line">
+
+<!-- Sezione 4 -->
+<section>
+
+		<h3 style="font-size: 25px; font-weight: 300;" class="name"> Cavi e collegamenti </h3>
+		<h4 class="subtitle" style="font-weight: 300;"> Il funzionamento del citofono </h4>
+
+		<div class="griglia">
+
+		<div class="tripla">
+			<p style="font-weight: 300; margin-top: 0px">
+					Il citofono è un sistema elettronico che rende possibile la comunicazione tra un <strong>posto citofonico interno </strong> di una abitazione con un <strong>posto esterno </strong> chiamato anche targa a pulsantiera. Il posto esterno è connesso tramite dei cavi all’alimentatore e ai posti interni. Il principio di funzionamento del citofono è del tutto simile a quello del telefono, tranne per il fatto che non esiste un sistema di selezione. 
+					L’unità interna permette la gestione di funzioni accessorie e secondarie come l’apertura di porte e cancelli d’ingresso principali o secondari come, per esempio il garage o accensioni di luci.
+					</p>
+		</div>
+		<div class="doppia"></div>
+
+		<div class="tripla">
+			<p style="font-weight: 300; margin-top: 0px">
+				<strong>Il citofono interno </strong>
+				<br> 
+				La tensione raggiunge un altoparlante nell’unità interna, dove la variazione di tensione è riconvertita in suono. 
+				Un circuito identico permette la comunicazione in senso inverso.
+				<br>
+				<br>
+				<strong>Il citofono esterno</strong>
+				<br>
+				Nell’unità esterna è presente un microfono che traduce le onde sonore della voce di chi parla in una corrispondente variazione di tensione.</p>
+		</div>
+		<div class="cella">
+			<img class="responsive" src="img/funzionamento/mod/modok/citofonointerno.jpg">
+			<figcaption><em>Citofono interno</em></figcaption>
+		</div>
+		<div class="cella">
+			<img class="responsive" src="img/funzionamento/mod/modok/citofonoesternook.jpg">
+			<figcaption><em>Citofono esterno</em></figcaption>
+		</div>
+
+		<div class="tripla">
+			<p style="font-weight: 300;margin-top: 0px">
+					I posti esterni ad oggi possono essere di due tipi: analogici e digitali. 
+					Gli impianti citofonici <strong>analogici </strong>utilizzano un sistema “multifiliare”, ovvero necessitano di diversi conduttori elettrici dove ogni filo ha una funzione ben precisaall’interno del sistema.
+					Gli impianti citofonici <strong>digitali </strong>invece utilizzano un sistema molto più semplice poichè la trasmissione del segnale viaggia su un linguaggio BUS ossia un semplice cavo a due conduttori, senza polarità.</p>
+		</div>
+		<div class="doppia"></div>
+
+		<div class="tripla">
+			<p style="font-weight: 300; margin-top: 0px">
+				<strong>Gli analogici </strong>, generalmente denominati come tradizionali, sono composti da pulsanti di chiamata, targhe porta nome, un microfono ed un altoparlante.
+				Nel sistema analogico è necessario almeno un filo per collegare la suoneria di ogni interno.
+				<br>
+				<br>
+				<strong>I digitali </strong>hanno la medesima composizione, ad eccezione dei pulsanti che vengono sostituiti da un modulo di chiamata digitale con display lcd grafico con pulsanti retroilluminati e rubrica contatti integrata, così da potere soddisfare la connessione con elevati numeri di appartamenti o posti interni, senza bisogno di dovere ricorrere a composizioni modulari come nel caso di pulsantiere analogiche.
+				<br>
+				Il sistema digitale inoltre riduce notevolmente il numero di cavi di collegamento: si trasmette una su una coppia di fili un segnale codificato, che identifica una specifica unità interna, la quale riconosce il codice e attiva la suoneria. Nei sistemi più moderni la coppia di fili può portare in forma digitale anche il segnale audio.</p>
+		</div>
+		<div class="cella">
+			<img  class="responsive" src="img/funzionamento/mod/modok/analogico.jpg">
+			<figcaption><em>Citofono analogico</em></figcaption>
+		</div>
+		<div class="cella">
+			<img  class="responsive" src="img/funzionamento/mod/modok/digitale.jpg">
+			<figcaption><em>Citofono digitale</em></figcaption>
+		</div>
+
+
+		<div class="tripla">
+			<p style="font-weight: 300;margin-top: 0px">
+				<strong>Il videocitofono </strong> è un impianto citofonico in cui è integrato un sistema di monitoraggio video. Un <strong>impianto citofonico</strong> è costituito da cinque sezioni:
+				<br>
+				<br>
+				<strong>1. Pulsantiera </strong>: raggruppa i pulsanti che permettono di chiamare un interno. Un circuito collega ogni pulsante ad una suoneria presente nell’unità interna corrispondente. Solitamente include anche un sistema di illuminazione interna che consente di leggere le indicazioni a fianco dei pulsanti anche al buio.
+				<br>
+				<br>
+				<strong>2. Unità audio esterna</strong>: installata in prossimità dell’ingresso, include un altoparlante, un microfono e spesso un amplificatore.
+				<br>
+				<br>
+				<strong>3. Unità audio interna</strong>: ne è presente una in ogni appartamento, e comprende una cornetta con microfono ed altoparlante, una suoneria, un pulsante per comandare l’apertura della porta e, in alcuni casi, altri pulsanti per comandare altre funzioni.
+				<br>
+				<br>
+				<strong>4. Alimentatore</strong>: fornisce le tensioni elettriche necessarie al funzionamento del sistema.
+				<br>
+				<br>
+				<strong>5. Apriporta</strong>: è un sistema di comando (solitamente un relè) che, quando viene premuto l’apposito pulsante situato sull’unità interna, comanda l’apertura della serratura elettrica.
+				<br>
+				<br>
+				Nei<strong> videocitofoni</strong> l'unità esterna, oltre alla pulsantiera e alla sezione audio comprendente il<strong> microfono</strong> e <strong>l'altoparlante</strong>, include anche una <strong>telecamera </strong>in bianco e nero o a colori. Vicino alla telecamera sono presenti alcuni LED a raggi infrarossi per illuminare la scena e consentirne la visione con qualunque condizione di luce ci sia all'esterno.
+				Ogni unità interna è dotata di un monitor B/N o colore su cui è visibile l'immagine ripresa dalla telecamera. Nei modelli con monitor a tubo catodico, allo scopo di limitare lo spessore del dispositivo viene utilizzato uno schermo in cui la superficie fluorescente ha profilo semiparabolico ed il pennello elettronico giunge lateralmente, colpendo la superficie dallo stesso lato da cui l'immagine è visualizzata. Nei modelli recenti, a questo tipo di monitor viene solitamente preferito un display LCD.
+
+				Il <strong>sistema video </strong>si attiva solo nel momento in cui un utente preme un pulsante di chiamata, e si disattiva dopo un tempo prefissato. Per ovvi motivi di privacy, l'immagine è visibile solamente nell'unità interna dell'interno chiamato.</p>
+		</div>
+		<div class="doppia">
+			<img class="responsive2"src="img/funzionamento/mod/modok/schema517nobordo.pdf">
+			<figcaption><em>Schema di un impianto citofonico</em></figcaption>
+		</div>
+
+		</div>
+
+</section>
+
+<section class="contenitorefinale">
+
+				<p class="textfinale"> Per scrivere tutti i testi si è preso ispirazione e spunti dai seguenti link:
+				<br>
+				Wikipedia, 6 Dicembre 2020, <a href="https://it.wikipedia.org/wiki/Citofono" title="il citofono" target="_blank">Il funzionamento e la storia del citofono</a>. L'enciclopedia libera.
+				<br>
+				Bticino, <a href="https://www.netatmo.com/it-it/guides/security/burglary/solutions/video-intercom-system" title="il citofono" target="_blank">Come funziona il citofono?</a>. Netatmo.
+				<br>
+				Sky Arte, 2 Gennaio 2016, <a href="https://arte.sky.it/2016/01/architetture-curiose-il-palazzo-con-lorecchio-a-milano/" title="il citofono" target="_blank">Architetture curiose: il Palazzo con l’orecchio a Milano</a>. Sky Arte.
+				<br>
+				Rosella Burattino, 24 ottobre 2019, <a href="https://milano.corriere.it/notizie/cronaca/19_ottobre_24/primo-citofono-d-italia-ha-forma-un-orecchio-si-trova-milano-3dcbd70e-f63e-11e9-852d-8d5c113e41ca.shtml" title="il citofono" target="_blank">Il primo citofono d’Italia ha la forma di un orecchio e si trova a Milano</a>. Corriere della sera.
+				<br>
+				ReteNews, 2019, <a href="https://www.rete-news.it/casa/levoluzione-della-tecnologia-nei-videocitofoni-e-citofoni.html" target="_blank">L’evoluzione della Tecnologia nei Videocitofoni e Citofoni</a>. ReteNews.
+				<br>
+				Lino Riglietti, 11 Luglio 2018, <a href="https://blog.allnet-italia.it/2018/07/11/2n-levoluzione-dei-sistemi-videocitofonici-in-ambito-residenziale/" target="_blank">2N: l’evoluzione dei sistemi videocitofonici in ambito residenziale</a>. Allnet.Italia.
+				<br>
+				Wikipedia, 26 Gennaio 2020, <a href="https://it.wikipedia.org/wiki/Videocitofono" target="_blank">Videocitofono</a>. L'enciclopedia libera.
+				<br>
+				Storia e cultura, 22 Giugno 2019, <a href="https://www.greelane.com/it/humanities/storia--cultura/gregorio-zara-filipino-scientist-1991703/" target="_blank">Biografia di Gregorio Zara, inventore del videotelefono</a>. Storia e cultura.
+				<br>
+				Wikipedia, 12 Novembre 2020, <a href="https://it.wikipedia.org/wiki/Nati_stanchi#" target="_blank">Nati stanchi</a>. L'enciclopedia libera.
+				<br>
+				Pianobarsicilia, 7 Marzo 2012, <a href="https://www.youtube.com/watch?v=5fNmX2MPjq4" target="_blank">Ficarra e Picone - il campanello di Passalacqua</a>. Youtube.
+				<br>
+				</p>
+
+<hr class="line">
+
+				<p class="atlantesx">
+					Atlante tecnologico
+					<br>
+					Citofono
+					<br>
+					Arianna Siciliano
+				</p>
+				<p class="atlantedx">
+					SUPSI
+					<br>
+					Corso di Interaction Design, A.A 2020/2021
+					<br>
+					Docenti: Andreas Gysin, Giovanni Profeta
+				</p>
+</section>
+
+</body>
+</html>
